@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Моя первая страница</title>
 </head>
 <body>
-$END$
+<form action="http://localhost:8080" method="post">
+    <p>
+        <label>
+            Это обычное поле ввода <input type="text" placeholder="писать сюда" name="textField">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Это disabled поле ввода <input type="text" disabled placeholder="disabled" name="disabledTextField">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Это readonly поле ввода <input type="text" readonly placeholder="readonly" name="readonlyTextField">
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Это многострочное поле ввода <textarea rows="3" cols="40" name="textArea">Исходный текст</textarea>
+        </label>
+    </p>
+
+    <p>
+        <label>
+            Это обязательное для заполнения многострочное поле ввода <textarea required rows="3" cols="15"
+                                                                               name="textArea"></textarea>
+        </label>
+    </p>
+
+    <p>
+        <label>Выберите вариант радио-кнопкой:</label>
+        <label>
+            <input checked type="radio" value="1" name="myRadio">Вариант 1
+        </label>
+        <label>
+            <input type="radio" value="2" name="myRadio">Вариант 2
+        </label>
+        <label>
+            <input type="radio" value="3" name="myRadio">Вариант 3
+        </label>
+    </p>
+
+    <p>
+        <label>Выберите вариант из выпадающего списка:
+            <select name="singleSelect">
+                <option disabled selected>Выберите вариант</option>
+                <option value="1">Вариант 1</option>
+                <option value="2">Вариант 2</option>
+                <option value="3">Вариант 3</option>
+            </select>
+        </label>
+    </p>
+
+    <p>
+        <button type="submit">Отправить данные</button>
+        <button type="reset">Очистить форму</button>
+    </p>
+</form>
+
+<a target="_blank" href="page1.html">Ссылка на страницу с контентом</a>
 </body>
 </html>
