@@ -1,42 +1,13 @@
 "use strict";
 
-const numbersArray = [0, -4, 18, 3, -1, 2];
+window.MYSPACE = window.MYSPACE || {};
+window.MYSPACE.numbersArray = [0, -4, 18, 3, -1, 2];
 
-console.log("Массив чисел: [" + numbersArray.join(", ") + "]");
-
-function sortArrayDesc(array) {
-    array.sort(function (e1, e2) {
-        return e2 - e1;
-    });
-}
-
-sortArrayDesc(numbersArray);
-
-console.log("Массив, отсортированный по убыванию: [" + numbersArray.join(", ") + "]");
-
-function getFirstFiveElements(array) {
-    return array.slice(0, 5);
-}
-
-console.log("Первые пять элементов массива: [" + getFirstFiveElements(numbersArray).join(", ") + "]");
-
-function getLastFiveElements(array) {
-    return array.slice(-5);
-}
-
-console.log("Последние пять элементов массива: [" + getLastFiveElements(numbersArray).join(", ") + "]");
-
-function getEvenNumbers(array) {
+window.MYSPACE.getEvenNumbers = function (array) {
     return array.filter(e => e % 2 === 0);
-}
+};
 
-function getEvenNumbersSum(array) {
-    return getEvenNumbers(array).reduce((sum, current) => sum + current, 0);
-}
-
-console.log("Сумма элементов массива, которые являются чётными числами: " + getEvenNumbersSum(numbersArray));
-
-function createOneHundredNumbersArray() {
+window.MYSPACE.createOneHundredNumbersArray = function () {
     const array = [];
 
     for (let i = 1; i <= 100; i++) {
@@ -44,14 +15,30 @@ function createOneHundredNumbersArray() {
     }
 
     return array;
-}
+};
 
-const oneHundredNumbersArray = createOneHundredNumbersArray();
+(function sortArrayDesc() {
+    MYSPACE.numbersArray.sort(function (e1, e2) {
+        return e2 - e1;
+    });
 
-console.log("Массив чисел от 1 до 100: [" + oneHundredNumbersArray.join(", ") + "]");
+    console.log("Массив, отсортированный по убыванию: [" + MYSPACE.numbersArray.join(", ") + "]");
+})();
 
-function getEvenNumbersSquares(array) {
-    return getEvenNumbers(array).map(e => e * e);
-}
+(function getFirstFiveElements() {
+    console.log("Первые пять элементов массива: [" + MYSPACE.numbersArray.slice(0, 5).join(", ") + "]");
+})();
 
-console.log("Список квадратов чётных чисел от 1 до 100: " + getEvenNumbersSquares(oneHundredNumbersArray).join(", "));
+(function getLastFiveElements() {
+    console.log("Последние пять элементов массива: [" + MYSPACE.numbersArray.slice(-5).join(", ") + "]");
+})();
+
+(function getEvenNumbersSum() {
+    console.log("Сумма элементов массива, которые являются чётными числами: " +
+        MYSPACE.getEvenNumbers(MYSPACE.numbersArray).reduce((sum, current) => sum + current, 0));
+})();
+
+(function getEvenNumbersSquares() {
+    console.log("Список квадратов чётных чисел от 1 до 100: "
+        + MYSPACE.getEvenNumbers(MYSPACE.createOneHundredNumbersArray()).map(e => e * e).join(", "));
+})();
