@@ -18,7 +18,7 @@ window.ARRAYS_SPACE.createOneHundredNumbersArray = function () {
 };
 
 (function sortArrayDesc() {
-    ARRAYS_SPACE.numbersArray.sort(function (e1, e2) {
+    ARRAYS_SPACE.numbersArray.sort((e1, e2) => {
         return e2 - e1;
     });
 
