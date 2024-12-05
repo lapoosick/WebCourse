@@ -35,7 +35,7 @@ window.ARRAYS_SPACE.createOneHundredNumbersArray = function () {
 
 (function () {
     console.log("Сумма элементов массива, которые являются чётными числами: " +
-        ARRAYS_SPACE.getEvenNumbers(ARRAYS_SPACE.numbersArray).reduce((sum, current) => sum + current, 0));
+        ARRAYS_SPACE.getEvenNumbers(ARRAYS_SPACE.numbersArray).reduce((sum, currentNumber) => sum + currentNumber, 0));
 })();
 
 (function () {
