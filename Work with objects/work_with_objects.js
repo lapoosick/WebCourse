@@ -74,7 +74,7 @@ window.OBJECTS_SPACE.countries = [
 })();
 
 (function () {
-    let countriesPopulations = {};
+    const countriesPopulations = {};
 
     OBJECTS_SPACE.countries.map(c => {
         countriesPopulations[c.countryName] = c.cities.reduce((countryPopulation, currentCity) => countryPopulation + currentCity.population, 0);
