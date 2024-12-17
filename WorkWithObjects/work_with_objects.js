@@ -61,10 +61,11 @@
     ];
 
     function getMaxCitiesCountCountries(countries) {
-        const citiesCounts = countries.map(country => country.cities.length);
-        const citiesMaxCount = citiesCounts.reduce((citiesCount1, citiesCount2) => Math.max(citiesCount1, citiesCount2), 0);
+        const maxCitiesCount = countries
+            .map(country => country.cities.length)
+            .reduce((countryCitiesCount1, countryCitiesCount2) => Math.max(countryCitiesCount1, countryCitiesCount2), 0);
 
-        console.log(countries.filter(country => country.cities.length === citiesMaxCount));
+        return countries.filter(country => country.cities.length === maxCitiesCount);
     }
 
     function getCountriesPopulations(countries) {
@@ -74,9 +75,9 @@
             countriesPopulations[country.name] = country.cities.reduce((countryPopulation, city) => countryPopulation + city.population, 0);
         });
 
-        console.log(countriesPopulations);
+        return countriesPopulations;
     }
 
-    getMaxCitiesCountCountries(countries);
-    getCountriesPopulations(countries);
+    console.log(getMaxCitiesCountCountries(countries));
+    console.log(getCountriesPopulations(countries));
 })();
