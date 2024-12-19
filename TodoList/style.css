@@ -43,6 +43,7 @@ body > * {
 .todo-text {
     display: inline-block;
     width: 250px;
+    overflow: auto;
 }
 
 .edit-todo-text-field {
