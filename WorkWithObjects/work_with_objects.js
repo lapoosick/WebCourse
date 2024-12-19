@@ -61,15 +61,7 @@
     ];
 
     function getMaxCitiesCountCountries(countries) {
-        let maxCitiesCount = 0;
-
-        countries.forEach(country => {
-            const citiesCount = country.cities.length;
-
-            if (citiesCount > maxCitiesCount) {
-                maxCitiesCount = citiesCount;
-            }
-        });
+        const maxCitiesCount = countries.reduce((maxCitiesCount, country) => Math.max(maxCitiesCount, country.cities.length), 0);
 
         return countries.filter(country => country.cities.length === maxCitiesCount);
     }
