@@ -47,12 +47,20 @@
     }
 
     class DogClass extends AnimalClass {
+        constructor(name) {
+            super(name);
+        }
+
         speak() {
             console.log(`${this.name} лает в классе.`);
         }
     }
 
     class CatClass extends AnimalClass {
+        constructor(name) {
+            super(name);
+        }
+
         speak() {
             console.log(`${this.name} мяукает в классе.`);
         }
