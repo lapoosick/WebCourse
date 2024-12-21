@@ -35,42 +35,44 @@
     animal.speak();
     dog.speak();
     cat.speak();
+})();
 
-    class AnimalClass {
+(function () {
+    class Animal {
         constructor(name) {
             this.name = name;
         }
 
         speak() {
-            console.log(`${this.name} издаёт звук в классе.`);
+            console.log(`${this.name} издаёт звук.`);
         }
     }
 
-    class DogClass extends AnimalClass {
+    class Dog extends Animal {
         constructor(name) {
             super(name);
         }
 
         speak() {
-            console.log(`${this.name} лает в классе.`);
+            console.log(`${this.name} лает.`);
         }
     }
 
-    class CatClass extends AnimalClass {
+    class Cat extends Animal {
         constructor(name) {
             super(name);
         }
 
         speak() {
-            console.log(`${this.name} мяукает в классе.`);
+            console.log(`${this.name} мяукает.`);
         }
     }
 
-    const classAnimal = new AnimalClass("Зверь");
-    const classDog = new DogClass("Бобик");
-    const classCat = new CatClass("Мурзик");
+    const animal = new Animal("Зверь");
+    const dog = new Dog("Бобик");
+    const cat = new Cat("Мурзик");
 
-    classAnimal.speak();
-    classDog.speak();
-    classCat.speak();
+    animal.speak();
+    dog.speak();
+    cat.speak();
 })();
