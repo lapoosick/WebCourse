@@ -26,18 +26,18 @@
     padding: 14px 11px 13px;
 }
 
-.first-column {
+.first-name-column {
     width: 20%;
 }
 
-.second-column {
+.last-name-column {
     width: 20%;
 }
 
-.third-column {
+.job-title-column {
     width: 35%;
 }
 
-.fourth-column {
+.twitter-column {
     width: 23%;
 }
