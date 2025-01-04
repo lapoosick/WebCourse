@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 860px;
     font-family: Graphik, sans-serif;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .table tr:nth-child(odd) {
@@ -17,23 +17,27 @@
     font-weight: normal;
     color: #fff;
     text-align: left;
-    padding: 12px 11px 9px;
+    padding: 13px 11px 9px;
 }
 
 .table td {
     border: 1px solid #cfcfcf;
     color: #221409;
-    padding: 12px 11px 13px;
+    padding: 14px 11px 13px;
 }
 
-.twenty-percents-width-column {
+.first-column {
     width: 20%;
 }
 
-.thirty-five-percents-width-column {
+.second-column {
+    width: 20%;
+}
+
+.third-column {
     width: 35%;
 }
 
-.twenty-three-percents-width-column {
+.fourth-column {
     width: 23%;
 }
