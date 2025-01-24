@@ -38,13 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
             newTodoItem.querySelector(".edit-button").addEventListener("click", function () {
                 newTodoItem.innerHTML = `
                     <form class="edit-todo-item-form">
-                        <div class="todo-text">
-                            <input class="edit-todo-text-field" type="text">
-                            <div class="error-message">Необходимо добавить значение</div>
-                        </div>
-                       
+                        <input class="edit-todo-text-field" type="text">
                         <button class="save-button" type="submit">Сохранить</button>
                         <button class="cancel-button" type="button">Отмена</button>
+                        <div class="error-message">Необходимо ввести какой-то текст</div>
                     </form>
                 `;
 

@@ -8,18 +8,21 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-<h1>TODO List</h1>
+<div class="header">
+    <h1>Список делов</h1>
 
-<form class="new-todo-form" id="new-todo-form">
-    <label class="label" for="new-todo-text-field">Введите текст заметки</label>
+    <form class="new-todo-form" id="new-todo-form">
+        <div>
+            <label class="label" for="new-todo-text-field">Введите текст заметки</label>
+        </div>
 
-    <div>
         <input class="new-todo-text-field" id="new-todo-text-field" type="text">
-        <div class="error-message">Необходимо добавить значение</div>
-    </div>
 
-    <button type="submit">Добавить</button>
-</form>
+        <button type="submit">Добавить</button>
+
+        <div class="error-message">Необходимо ввести какой-то текст</div>
+    </form>
+</div>
 
 <ul class="todo-list" id="todo-list"></ul>
 </body>
