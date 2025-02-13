@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>TODO List</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css-reset.css">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -13,14 +13,16 @@
 
     <form class="new-todo-form" id="new-todo-form">
         <div>
-            <label class="label" for="new-todo-text-field">Введите текст заметки</label>
+            <label class="new-todo-text-field-label" for="new-todo-text-field">Введите текст заметки</label>
         </div>
 
-        <input class="new-todo-text-field" id="new-todo-text-field" type="text">
+        <div>
+            <input class="new-todo-text-field" id="new-todo-text-field" type="text">
 
-        <button type="submit">Добавить</button>
+            <span class="error-message">Необходимо ввести какой-то текст</span>
+        </div>
 
-        <div class="error-message">Необходимо ввести какой-то текст</div>
+        <button class="add-new-todo-item-button" type="submit">Добавить</button>
     </form>
 </div>
 

@@ -5,6 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const newTodoTextField = document.getElementById("new-todo-text-field");
     const newTodoForm = document.getElementById("new-todo-form");
 
+    newTodoTextField.addEventListener("focus", function (){
+        newTodoTextField.classList.remove("invalid");
+    });
+
     newTodoForm.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -14,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (newTodoText.length === 0) {
             newTodoTextField.classList.add("invalid");
+            newTodoTextField.blur();
 
             return;
         }
@@ -24,8 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
             newTodoItem.innerHTML = `
                 <div class="new-todo-item">
                     <div class="todo-text"></div>
-                    <button class="edit-button" type="button">Редактировать</button>
-                    <button class="delete-button" type="button">Удалить</button>
+                    
+                    <div class="buttons">
+                        <button class="edit-button" type="button">Редактировать</button>
+                        
+                        <button class="delete-button" type="button">Удалить</button> 
+                    </div>
                 </div>
             `;
 
@@ -38,10 +47,17 @@ document.addEventListener("DOMContentLoaded", function () {
             newTodoItem.querySelector(".edit-button").addEventListener("click", function () {
                 newTodoItem.innerHTML = `
                     <form class="edit-todo-item-form">
-                        <input class="edit-todo-text-field" type="text">
-                        <button class="save-button" type="submit">Сохранить</button>
-                        <button class="cancel-button" type="button">Отмена</button>
-                        <div class="error-message">Необходимо ввести какой-то текст</div>
+                        <div class="edit-todo-div">
+                            <input class="edit-todo-text-field" type="text">
+                            
+                            <div class="error-message">Необходимо ввести какой-то текст</div>
+                        </div>
+                        
+                        <div class="buttons">
+                            <button class="save-button" type="submit">Сохранить</button>
+                            
+                            <button class="cancel-button" type="button">Отмена</button>
+                        </div>
                     </form>
                 `;
 
@@ -54,6 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const editTodoItemForm = newTodoItem.querySelector(".edit-todo-item-form");
 
+                editTodoTextField.addEventListener("focus", function (){
+                    editTodoTextField.classList.remove("invalid");
+                });
+
                 editTodoItemForm.addEventListener("submit", function (e) {
                     e.preventDefault();
 
@@ -61,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     if (editedTodoText.length === 0) {
                         editTodoTextField.classList.add("invalid");
+                        editTodoTextField.blur();
 
                         return;
                     }
