@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 const editTodoItemForm = newTodoItem.querySelector(".edit-todo-item-form");
+                const buttonsDiv = editTodoItemForm.querySelector(".buttons");
 
                 editTodoTextField.addEventListener("focus", function (){
                     editTodoTextField.classList.remove("invalid");
@@ -82,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (editedTodoText.length === 0) {
                         editTodoTextField.classList.add("invalid");
                         editTodoTextField.blur();
+                        buttonsDiv.classList.add("vert-align")
 
                         return;
                     }
