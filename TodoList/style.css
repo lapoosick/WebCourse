@@ -1,24 +1,26 @@
 .main {
     background-color: #a7d9fb;
-    padding: 10px 0;
+    padding: 5px 0;
     text-align: center;
-    width: 60%;
+    max-width: 344px;
+    width: 100%;
     margin: 0 auto;
+    font-size: 12px;
 }
 
 .main h1 {
-    font-size: 64px;
+    font-size: 46px;
 }
 
 .new-todo-text-field {
-    width: 65%;
-    margin: 10px;
+    width: 75%;
+    margin: 5px;
 }
 
 .error-message {
     color: #f00;
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     display: none;
 }
 
@@ -32,8 +34,10 @@
 
 .todo-list {
     padding-left: 0;
-    width: 60%;
+    max-width: 344px;
+    width: 100%;
     margin: 0 auto;
+    font-size: 12px;
 }
 
 .todo-list li {
@@ -42,7 +46,7 @@
 }
 
 .todo-list li:nth-child(odd) {
-    background: #f9f9f9;
+    background-color: #f9f9f9;
 }
 
 .todo-list li:hover {
@@ -54,26 +58,33 @@
 }
 
 .todo-text {
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
-    width: 75%;
+    max-width: 200px;
+    width: 100%;
 }
 
 .edit-todo-div {
-    width: 75%;
+    width: 100%;
+    max-width: 200px;
     display: inline-block;
 }
 
 .edit-todo-text-field {
-    width: 96%;
-    margin: 9px 10px;
+    width: 95%;
+    margin: 4px 5px;
     border-width: 1px;
 }
 
 .buttons {
     display: inline-block;
-    width: 24%;
-    min-width: 109px;
+    max-width: 140px;
+    width: 100%;
+}
+
+.buttons-text-field-one-line {
+    vertical-align: top;
+    margin-top: 2px;
 }
 
 .add-new-todo-item-button {
@@ -87,17 +98,17 @@
 }
 
 .edit-button {
-    width: 109px;
+    width: 84px;
 }
 
 .delete-button {
-    width: 68px;
+    width: 53px;
 }
 
 .save-button {
-    width: 109px;
+    width: 84px;
 }
 
 .cancel-button {
-    width: 68px;
+    width: 53px;
 }

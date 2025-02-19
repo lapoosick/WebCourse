@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const newTodoTextField = document.getElementById("new-todo-text-field");
     const newTodoForm = document.getElementById("new-todo-form");
 
-    newTodoTextField.addEventListener("focus", function (){
+    newTodoTextField.addEventListener("focus", function () {
         newTodoTextField.classList.remove("invalid");
     });
 
@@ -71,8 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const editTodoItemForm = newTodoItem.querySelector(".edit-todo-item-form");
                 const buttonsDiv = editTodoItemForm.querySelector(".buttons");
 
-                editTodoTextField.addEventListener("focus", function (){
+                editTodoTextField.addEventListener("focus", function () {
                     editTodoTextField.classList.remove("invalid");
+                    buttonsDiv.classList.remove("buttons-text-field-one-line");
                 });
 
                 editTodoItemForm.addEventListener("submit", function (e) {
@@ -83,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     if (editedTodoText.length === 0) {
                         editTodoTextField.classList.add("invalid");
                         editTodoTextField.blur();
-                        buttonsDiv.classList.add("vert-align")
+                        buttonsDiv.classList.add("buttons-text-field-one-line");
 
                         return;
                     }
